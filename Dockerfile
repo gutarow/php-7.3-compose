@@ -2,6 +2,7 @@ FROM php:7.3-apache
 MAINTAINER Gutar "<admin@escolasoft.com>"
 ENV DEBIAN_FRONTEND=noninteractive
 
+
 # Install components
 RUN apt-get update -y && apt-get install -y \
   curl \
