@@ -58,7 +58,8 @@ RUN apt-get update -y && apt-get install -y \
 
 #Add Composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
-  php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+  php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
+  rm *
 
 # Apache + xdebug configuration
 RUN { \
