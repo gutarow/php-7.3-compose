@@ -85,7 +85,7 @@ RUN { \
   } | tee /etc/apache2/sites-available/000-default.conf
 
 RUN echo "ServerName localhost" > /etc/apache2/conf-available/fqdn.conf && \
-  echo "date.timezone = Pacific/Auckland" > /usr/local/etc/php/conf.d/timezone.ini && \
+  echo "date.timezone = Europe/Warsaw" > /usr/local/etc/php/conf.d/timezone.ini && \
   echo "log_errors = On\nerror_log = /dev/stderr" > /usr/local/etc/php/conf.d/errors.ini && \
   a2enmod rewrite expires remoteip cgid && \
   usermod -u 1000 www-data && \
