@@ -44,7 +44,7 @@ RUN apt-get update -y && apt-get install -y \
   libxslt-dev && \
   docker-php-ext-configure intl && \
   docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
-  docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --version=1.10.17 && \
+  docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
   docker-php-ext-install -j$(nproc) \
   intl \
   ldap \
@@ -58,7 +58,7 @@ RUN apt-get update -y && apt-get install -y \
 
 #Add Composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
-  php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
+  php composer-setup.php --install-dir=/usr/local/bin --filename=composer --version=1.10.17 && \
   rm *
 
 # Apache + xdebug configuration
