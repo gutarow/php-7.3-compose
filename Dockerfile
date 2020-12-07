@@ -3,7 +3,7 @@ MAINTAINER Gutar "<admin@escolasoft.com>"
 ENV DEBIAN_FRONTEND=noninteractive
 
 
-# Install components 7.3.24
+# Install components 7.3.25
 RUN apt-get update -y && apt-get install -y \
   curl \
   git-core \
